@@ -48,77 +48,48 @@ namespace TallerModel
             _context = new TallerContext();
         }
 
-        public Usuario Create(Usuario usuario)
+        public async Task<Usuario> Create(Usuario usuario)
         {
             _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
-            return (usuario);
+            await _context.SaveChangesAsync();
+            return(usuario);
         }
 
-        public IEnumerable<Usuario> GetAll()
+        public async Task<List<Usuario>> GetAll()
         {
-            var usuarios = _context.Usuarios.ToList();
-            return usuarios;
+            return await _context.Usuarios.ToListAsync();
         }
 
-        public Usuario? GetById(int id)
+        public async Task<Usuario?> GetById(int id)
         {
-            {
-                var usuario = _context.Usuarios.SingleOrDefault(u => u.UsuarioId == id);
-
-                if (usuario == null)
-                {
-                    return null;
-                }
-
-                return (usuario);
-            }
+            return await _context.Usuarios.SingleOrDefaultAsync(u => u.UsuarioId == id);
         }
 
-        public IEnumerable<Usuario>? GetByNombreyAp(string aBuscar)
+        public async Task<List<Usuario>> GetByNombreyAp(string aBuscar)
         {
-            var usuarios = _context.Usuarios.Where(u => u.Nombre.Contains(aBuscar) || u.Apellido.Contains(aBuscar)).ToList();
-            
-            if (usuarios == null)
-            {
-                return null;
-            }
-
-            return usuarios;
+            return await _context.Usuarios
+                .Where(u => u.Nombre.Contains(aBuscar) || u.Apellido.Contains(aBuscar))
+                .ToListAsync();
         }
 
-        public IEnumerable<Usuario>? GetByPuesto(Rango puestoABuscar)
-        {
-            var usuarios = _context.Usuarios.Where(u => u.Puesto == puestoABuscar).ToList();
-
-            if (usuarios == null)
-            {
-                return null;
-            }
-
-            return usuarios;
-        }
-
-        public Usuario Update(Usuario usuario)
+        public async Task<Usuario> Update(Usuario usuario)
         {
             _context.Usuarios.Update(usuario);
-            _context.SaveChanges();
-            return (usuario);
+            await _context.SaveChangesAsync();
+            return usuario;
         }
 
-        public int? Delete(int id)
+        public async Task<int?> Delete(int id)
         {
-            var usuario = _context.Usuarios.Single(u => u.UsuarioId == id);
-            
+            var usuario = await _context.Usuarios.SingleOrDefaultAsync(u => u.UsuarioId == id);
             if (usuario == null)
             {
                 return null;
             }
 
             _context.Usuarios.Remove(usuario);
-            _context.SaveChanges();
-            return (id);
+            await _context.SaveChangesAsync();
+            return id;
         }
     }
-
 }
