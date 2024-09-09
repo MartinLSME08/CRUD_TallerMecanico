@@ -8,7 +8,7 @@ namespace TallerModelAPI.Controllers
     public class UsuariosController : ControllerBase
     {
         [HttpPost("Create")]
-        public async Task<ActionResult<Usuario>> Create(Usuario usuario)
+        public async Task<ActionResult<Usuario>>Create(Usuario usuario)
             {
                 UsuarioServices usuarioService = new UsuarioServices();
                 var usuarioCreado = usuarioService.Create(usuario);
@@ -26,50 +26,37 @@ namespace TallerModelAPI.Controllers
     }
 
         [HttpGet("GetById")]
-        public async Task<ActionResult<Usuario>> GeyById(int usuarioId)
+        public async Task<ActionResult<Usuario>>GeyById(int usuarioId)
         {
             UsuarioServices usuarioService = new UsuarioServices();
             var usuarioEncontrado = usuarioService.GetById(usuarioId);
-            if (usuarioEncontrado != null)
-            {
-                return BadRequest("Error al encontrar usuario");
-            }
-            else
-            {
-                return Ok(usuarioEncontrado);
-            }
+            return usuarioEncontrado == null ? NotFound() : Ok(usuarioEncontrado);
+
         }
 
         [HttpGet("GetByNombreyAp")]
-
-        [HttpPut("Update")]
-        public async Task<ActionResult<Usuario>> Update(int usuarioId)
+        public async Task<ActionResult<Usuario>> GetByNombreyAp(string filtro)
         {
             UsuarioServices usuarioService = new UsuarioServices();
-            var usuarioActualizado = usuarioService.GetById(usuarioId);
-            if (usuarioActualizado != null)
-            {
-                return BadRequest("Error al actualizar  usuario");
-            }
-            else
-            {
-                return Ok(usuarioActualizado);
-            }
+            var usuarioEncontrado = usuarioService.GetByNombreyAp(filtro);
+            return usuarioEncontrado == null ? NotFound() : Ok(usuarioEncontrado);
+        }
+
+        [HttpPut("Update")]
+        public async Task<ActionResult<Usuario>>Update(Usuario usuario)
+        {
+            UsuarioServices usuarioService = new UsuarioServices();
+            var usuarioActualizado = usuarioService.Update(usuario);
+            return usuarioActualizado == null ? NotFound() : Ok(usuarioActualizado);
         }
 
         [HttpDelete("Delete")]
-        public async Task<ActionResult<Usuario>> Delete(int usuarioId)
+        public async Task<ActionResult<Usuario>>Delete(int usuarioId)
         {
             UsuarioServices usuarioService = new UsuarioServices();
-            var usuarioEncontrado = usuarioService.Delete(usuarioId);
-            if (usuarioEncontrado != null)
-            {
-                return BadRequest("Error al eliminar usuario");
-            }
-            else
-            {
-                return Ok(usuarioEncontrado);
-            }
+            var usuarioEliminado = usuarioService.Delete(usuarioId);
+            return usuarioEliminado == null ? NotFound() : Ok(usuarioEliminado);
+
         }
     }
 }
