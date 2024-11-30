@@ -1,0 +1,39 @@
+﻿@page "/mostrar-info-vehiculo"
+<div class="modal fade show mt-5" style="display: block; position: absolute; right: 20px;" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información del Vehículo</h5>
+                <a class="close custom-close" href="/vehiculos">
+                    <span>&times;</span>
+                </a>
+            </div>
+            <div class="modal-body">
+                <p><strong>Patente:</strong> ABC123</p>
+                <p><strong>Marca:</strong> Toyota</p>
+                <p><strong>Modelo:</strong> Corolla</p>
+                <p><strong>Apoderado:</strong> Juan Perez</p>
+                <p><strong>DNI Apoderado:</strong> 12345678</p>
+                <p><strong>Estado en Registro Nacional Vehicular:</strong> Registrado </p>
+                <p><strong>Ultima Revision:</strong> 26/06/2011</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-close {
+        font-size: 2rem; /* Tamaño del texto */
+        color: red; /* Color rojo */
+        text-decoration: none; /* Sin subrayado */
+    }
+
+        .custom-close:hover {
+            color: darkred; /* Color más oscuro al pasar el mouse */
+        }
+
+        .custom-close span {
+            display: inline-block;
+            font-weight: bold;
+        }
+</style>

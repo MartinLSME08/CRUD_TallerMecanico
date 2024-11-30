@@ -1,0 +1,56 @@
+﻿@using TallerModel
+@page "/mecanicos/{turnoId:int}"
+@inject UsuarioServices UsuarioService
+
+<h1>Mecánicos Disponibles</h1>
+
+@if (mecanicos == null)
+{
+    <p>Cargando...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mecanico in mecanicos)
+            {
+                <tr>
+                    <td>@mecanico.Nombre</td>
+                    <td>@mecanico.Apellido</td>
+                    <td>@mecanico.Email</td>
+                    <td>@mecanico.Telefono</td>
+                    <td>
+                        <NavLink class="btn btn-success" href="@($"/Mostrarinfoturno-asignado/{TurnoId}/{mecanico.UsuarioId}")">
+                            Asignar
+                        </NavLink>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public int TurnoId { get; set; }
+    private List<Usuario>? mecanicos;
+
+    protected override void OnInitialized()
+    {
+        // Crear mecánicos estáticos
+        mecanicos = new List<Usuario>
+        {
+            new Usuario { UsuarioId = 1, Nombre = "Carlos", Apellido = "Pérez", Email = "carlos@gmail.com", Telefono = "3624-763498" },
+            new Usuario { UsuarioId = 2, Nombre = "Ana", Apellido = "López", Email = "ana@gmail.com", Telefono = "3624-438872" },
+            new Usuario { UsuarioId = 3, Nombre = "Luis", Apellido = "García", Email = "luis@gmail.com", Telefono = "3624-349812" }
+        };
+    }
+}

@@ -1,0 +1,49 @@
+﻿@page "/Error_turnos"
+@using TallerModel
+@inject TurnoServices TurnoService
+
+<h1>Turnos sin Mecánico</h1>
+
+@if (turnosSinMecanico != null)
+{
+    <p>No hay turnos disponibles.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Turno ID</th>
+                <th>Vehículo</th>
+                <th>Cliente</th>
+                <th>Fecha y Hora</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var turno in turnosSinMecanico)
+            {
+                <tr>
+                    <td>@turno.TurnoId</td>
+                    <td>@turno.Vehiculo</td>
+                    <td>@turno.Cliente</td>
+                    <td>@turno.FechaHora</td>
+                    <td>
+                        <NavLink class="btn btn-primary" href="@($"/mecanicos/{turno.TurnoId}")">Asignar Mecánico</NavLink>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Turno>? turnosSinMecanico;
+
+    protected override void OnInitialized()
+    {
+        // Obtén la lista actualizada de turnos
+        turnosSinMecanico = TurnoService.GetTurnosSinMecanico();
+        Console.WriteLine("Turnos actualizados en la página de turnos."); // Para depuración
+    }
+}

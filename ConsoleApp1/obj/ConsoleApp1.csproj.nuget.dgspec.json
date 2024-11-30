@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\Users\\PC\\source\\repos\\Nuevo\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\Users\\PC\\source\\repos\\Nuevo\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Nuevo\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Nuevo\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Nuevo\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\TallerModel.csproj": {
-                "projectPath": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\TallerModel.csproj"
+              "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\TallerModel.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\TallerModel.csproj"
               }
             }
           }
@@ -47,8 +46,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -77,24 +77,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\TallerModel.csproj": {
+    "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\TallerModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\TallerModel.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\TallerModel.csproj",
         "projectName": "TallerModel",
-        "projectPath": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\TallerModel.csproj",
-        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\OneDrive - Facultad Regional Resistencia\\02 FACULTAD\\3er AÑO\\Diseño de Sistemas de Información\\TallerMecanico2\\TallerModel\\obj\\",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\TallerModel.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Nuevo\\TallerModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -103,7 +103,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -120,8 +119,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -168,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
